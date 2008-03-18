@@ -1,0 +1,3 @@
+Title: basepom-ds
+
+A parent POM with my usual settings for com.davidsoergel.* projects.
