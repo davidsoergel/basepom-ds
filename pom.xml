@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <!--
-  ~ Copyright (c) 2001-2007 David Soergel
+  ~ Copyright (c) 2001-2008 David Soergel
   ~ 418 Richmond St., El Cerrito, CA  94530
-  ~ david@davidsoergel.com
+  ~ dev@davidsoergel.com
   ~
   ~ All rights reserved.
   ~
@@ -31,7 +31,8 @@
   ~ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.davidsoergel</groupId>
 	<artifactId>basepom</artifactId>
@@ -54,7 +55,7 @@
 		<system>Trac</system>
 		<url>http://dev.davidsoergel.com</url>
 	</issueManagement>
-	
+
 	<dependencies>
 		<!--<dependency>
 			<groupId>junit</groupId>
@@ -82,7 +83,7 @@
 			<scope>compile</scope>
 		</dependency>
 	</dependencies>
-	
+
 	<build>
 		<plugins>
 			<plugin>
@@ -117,11 +118,11 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.4</version>
 				<configuration>
-				<useSystemClassLoader>true</useSystemClassLoader>
-				<!--		<suiteXmlFiles>
-						<suiteXmlFile>testng.xml</suiteXmlFile>
-					</suiteXmlFiles>
-			-->		<!--	<forkMode>once</forkMode>
+					<useSystemClassLoader>true</useSystemClassLoader>
+					<!--		<suiteXmlFiles>
+						  <suiteXmlFile>testng.xml</suiteXmlFile>
+					  </suiteXmlFiles>
+			  -->		<!--	<forkMode>once</forkMode>
 					  <systemProperties>
 						 <property>
 							  <name>javax.xml.parsers.SAXParserFactory</name>
@@ -132,14 +133,14 @@
 			</plugin>
 		</plugins>
 		<extensions>
-         <extension>
-            <groupId>org.apache.maven.wagon</groupId>
-            <artifactId>wagon-webdav</artifactId>
-            <version>1.0-beta-2</version>
-         </extension>
-      </extensions>
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-webdav</artifactId>
+				<version>1.0-beta-2</version>
+			</extension>
+		</extensions>
 	</build>
-	
+
 	<reporting>
 		<plugins>
 			<plugin>
@@ -175,41 +176,41 @@
 
 
 	<repositories>
-	    <repository>
-	        <id>central</id>
-	        <url>http://dev.davidsoergel.com/artifactory/repo</url>
-	        <snapshots>
-	            <enabled>false</enabled>
-	        </snapshots>
-	    </repository>
-	    <repository>
-	        <id>snapshots</id>
-	        <url>http://dev.davidsoergel.com/artifactory/repo</url>
-	        <releases>
-	            <enabled>false</enabled>
-	        </releases>
-	    </repository>
+		<repository>
+			<id>central</id>
+			<url>http://dev.davidsoergel.com/artifactory/repo</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>snapshots</id>
+			<url>http://dev.davidsoergel.com/artifactory/repo</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+		</repository>
 	</repositories>
 	<pluginRepositories>
-	    <pluginRepository>
-	        <id>central</id>
-	        <url>http://dev.davidsoergel.com/artifactory/plugins-releases</url>
-	        <snapshots>
-	            <enabled>false</enabled>
-	        </snapshots>
-	    </pluginRepository>
-	    <pluginRepository>
-	        <id>snapshots</id>
-	        <url>http://dev.davidsoergel.com/artifactory/plugins-snapshots</url>
-	        <releases>
-	            <enabled>false</enabled>
-	        </releases>
-	    </pluginRepository>
-	
-	<!--	<pluginRepository>
+		<pluginRepository>
+			<id>central</id>
+			<url>http://dev.davidsoergel.com/artifactory/plugins-releases</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+		<pluginRepository>
+			<id>snapshots</id>
+			<url>http://dev.davidsoergel.com/artifactory/plugins-snapshots</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+		</pluginRepository>
+
+		<!--	<pluginRepository>
 			<id>apache.snapshots</id>
 			<url>http://people.apache.org/repo/m2-snapshot-repository</url>
-	        <url>http://dev.davidsoergel.com/artifactory/apache-m2-snapshots-cache</url>
+			<url>http://dev.davidsoergel.com/artifactory/apache-m2-snapshots-cache</url>
 			<releases>
 				<enabled>false</enabled>
 			</releases>
@@ -245,21 +246,20 @@
 			<notifier>
 				<type>mail</type>
 				<configuration>
-					<address>david@davidsoergel.com</address>
+					<address>dev@davidsoergel.com</address>
 				</configuration>
 			</notifier>
 		</notifiers>
 	</ciManagement>
-	
+
 	<developers>
 		<developer>
 			<id>lorax</id>
 			<name>David Soergel</name>
-			<email>david@davidsoergel.com</email>
+			<email>dev@davidsoergel.com</email>
 			<roles>
 				<role>Developer</role>
 			</roles>
-			<organization>University of California, Berkeley</organization>
 			<timezone>-8</timezone>
 		</developer>
 	</developers>
