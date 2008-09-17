@@ -31,14 +31,13 @@
   ~ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.davidsoergel</groupId>
 	<artifactId>basepom</artifactId>
 
 	<name>basepom</name>
-	<version>0.92-SNAPSHOT</version>
+	<version>0.92</version>
 	<url>http://dev.davidsoergel.com/basepom-ds</url>
 	<description>A parent POM with my usual settings.</description>
 
@@ -248,8 +247,8 @@
 
 
 	<scm>
-		<connection>scm:svn:http://svn.davidsoergel.com/repos/basepom-ds</connection>
-		<developerConnection>scm:svn:svn+ssh://svn.davidsoergel.com/home/svn/repos-ds/basepom-ds</developerConnection>
+		<connection>scm:svn:http://svn.davidsoergel.com/repos/basepom-ds/tags/basepom-0.92</connection>
+		<developerConnection>scm:svn:svn+ssh://svn.davidsoergel.com/home/svn/repos-ds/basepom-ds/tags/basepom-0.92</developerConnection>
 	</scm>
 
 	<ciManagement>
