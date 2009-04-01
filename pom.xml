@@ -164,6 +164,7 @@
 				<configuration>
 					<linkJavadoc>true</linkJavadoc>
 					<javadocDir>../apidocs</javadocDir>
+                    			<linksource>true</linksource>
 				</configuration>
 			</plugin>
 			<!--<plugin>
