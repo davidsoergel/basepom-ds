@@ -59,26 +59,26 @@
 		<!--<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.0</version>
+			<version>4.7</version>
 			<scope>test</scope>
 		</dependency>-->
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
-			<version>5.5</version>
+			<version>5.9</version>
 			<scope>test</scope>
 			<classifier>jdk15</classifier>
 		</dependency>
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
-			<version>1.2.13</version>
+			<version>1.2.15</version>
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.intellij</groupId>
 			<artifactId>annotations</artifactId>
-			<version>6.0.3</version>
+			<version>7.0.3</version>
 			<scope>compile</scope>
 		</dependency>
 	</dependencies>
@@ -128,19 +128,23 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.4</version>
+				<version>2.4.3</version>
 				<configuration>
 					<useSystemClassLoader>true</useSystemClassLoader>
-					<!--		<suiteXmlFiles>
+					<!--
+					  <suiteXmlFiles>
 						  <suiteXmlFile>testng.xml</suiteXmlFile>
 					  </suiteXmlFiles>
-			  -->		<!--	<forkMode>once</forkMode>
+			  		-->	
+					<!--
+					  <forkMode>once</forkMode>
 					  <systemProperties>
 						 <property>
 							  <name>javax.xml.parsers.SAXParserFactory</name>
 							   <value>org.apache.xerces.jaxp.SAXParserFactoryImpl</value>
 						 </property>
-					</systemProperties>-->
+					  </systemProperties>
+					-->
 				</configuration>
 			</plugin>
 		</plugins>
@@ -182,7 +186,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-report-plugin</artifactId>
-				<version>2.3</version>
+				<version>2.4.3</version>
 			</plugin>
 		</plugins>
 	</reporting>
@@ -220,7 +224,8 @@
 			</releases>
 		</pluginRepository>
 
-		<!--	<pluginRepository>
+		<!--
+		<pluginRepository>
 			<id>apache.snapshots</id>
 			<url>http://people.apache.org/repo/m2-snapshot-repository</url>
 			<url>http://dev.davidsoergel.com/artifactory/apache-m2-snapshots-cache</url>
@@ -230,7 +235,9 @@
 			<snapshots>
 				<enabled>true</enabled>
 			</snapshots>
-		</pluginRepository>-->
+		</pluginRepository>
+		-->
+		
 	</pluginRepositories>
 
 	<distributionManagement>
@@ -267,7 +274,7 @@
 
 	<developers>
 		<developer>
-			<id>lorax</id>
+			<id>soergel</id>
 			<name>David Soergel</name>
 			<email>dev@davidsoergel.com</email>
 			<roles>
