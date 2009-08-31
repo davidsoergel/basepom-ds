@@ -131,11 +131,11 @@
 				<version>2.4.3</version>
 				<configuration>
 					<useSystemClassLoader>true</useSystemClassLoader>
-					<!--
+					
 					  <suiteXmlFiles>
 						  <suiteXmlFile>testng.xml</suiteXmlFile>
 					  </suiteXmlFiles>
-			  		-->	
+			  		
 					<!--
 					  <forkMode>once</forkMode>
 					  <systemProperties>
