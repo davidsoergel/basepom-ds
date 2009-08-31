@@ -37,7 +37,7 @@
 	<artifactId>basepom</artifactId>
 
 	<name>basepom</name>
-	<version>0.95</version>
+	<version>0.96-SNAPSHOT</version>
 	<url>http://dev.davidsoergel.com/basepom-ds</url>
 	<description>A parent POM with my usual settings.</description>
 
@@ -256,8 +256,8 @@
 
 
 	<scm>
-		<connection>scm:svn:http://svn.davidsoergel.com/repos/basepom-ds/tags/basepom-0.95</connection>
-		<developerConnection>scm:svn:svn+ssh://svn.davidsoergel.com/home/svn/repos-ds/basepom-ds/tags/basepom-0.95</developerConnection>
+		<connection>scm:svn:http://svn.davidsoergel.com/repos/basepom-ds/tags/basepom-0.93</connection>
+		<developerConnection>scm:svn:svn+ssh://svn.davidsoergel.com/home/svn/repos-ds/basepom-ds/tags/basepom-0.93</developerConnection>
 	</scm>
 
 	<ciManagement>
