@@ -58,6 +58,12 @@
 		<system>Trac</system>
 		<url>http://dev.davidsoergel.com</url>
 	</issueManagement>
+	
+	<scm>
+		<connection>scm:hg:https://hg.davidsoergel.com/basepom-ds</connection>
+		<developerConnection>scm:hg:ssh://dev.davidsoergel.com//home/hg/basepom-ds</developerConnection>
+		<url>http://hg.davidsoergel.com/basepom-ds</url>
+	</scm>
 
 	<dependencies>
 		<!--<dependency>
