@@ -37,7 +37,7 @@
 	<artifactId>basepom</artifactId>
 
 	<name>basepom</name>
-	<version>0.97-SNAPSHOT</version>
+	<version>0.97</version>
 	<url>http://dev.davidsoergel.com/basepom-ds</url>
 	<description>A parent POM with my usual settings.</description>
 
