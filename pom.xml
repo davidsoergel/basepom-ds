@@ -30,41 +30,32 @@
   ~ NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
   ~ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   -->
-
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.davidsoergel</groupId>
 	<artifactId>basepom</artifactId>
-
 	<name>basepom</name>
 	<version>0.98-SNAPSHOT</version>
 	<url>http://dev.davidsoergel.com/basepom-ds</url>
 	<description>A parent POM with my usual settings.</description>
-
 	<organization>
 		<name>David Soergel</name>
 		<url>http://www.davidsoergel.com</url>
 	</organization>
-
 	<inceptionYear>2006</inceptionYear>
-
 	<packaging>pom</packaging>
-
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
-
 	<issueManagement>
 		<system>Trac</system>
 		<url>http://dev.davidsoergel.com</url>
 	</issueManagement>
-	
 	<scm>
 		<connection>scm:hg:https://hg.davidsoergel.com/basepom-ds</connection>
 		<developerConnection>scm:hg:ssh://dev.davidsoergel.com//home/hg/basepom-ds</developerConnection>
 		<url>http://hg.davidsoergel.com/basepom-ds</url>
 	</scm>
-
 	<dependencies>
 		<!--<dependency>
 			<groupId>junit</groupId>
@@ -90,42 +81,55 @@
 			<artifactId>slf4j-log4j12</artifactId>
 			<version>1.6.4</version>
 		</dependency>-->
-		<!--<dependency>
+		<dependency>
 			<groupId>com.intellij</groupId>
 			<artifactId>annotations</artifactId>
 			<version>7.0.3</version>
 			<scope>compile</scope>
-		</dependency>-->
+		</dependency>
 	</dependencies>
-
 	<build>
 		<pluginManagement>
-      <plugins>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-site-plugin</artifactId>
-          <version>3.1</version>
-          <dependencies>
-            <dependency><!-- add support for ssh/scp -->
-              <groupId>org.apache.maven.wagon</groupId>
-              <artifactId>wagon-ssh</artifactId>
-              <version>1.0</version>
-            </dependency>
-          </dependencies>
-        </plugin>
-      </plugins>
-    </pluginManagement>
-
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-site-plugin</artifactId>
+					<version>3.1</version>
+					<dependencies>
+						<dependency>
+							<!-- add support for ssh/scp -->
+							<groupId>org.apache.maven.wagon</groupId>
+							<artifactId>wagon-ssh</artifactId>
+							<version>1.0</version>
+						</dependency>
+					</dependencies>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+		</plugins>
 		<extensions>
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-ssh-external</artifactId>
+				<version>1.0</version>
+			</extension>
 			<extension>
 				<groupId>org.apache.maven.wagon</groupId>
 				<artifactId>wagon-webdav</artifactId>
 				<version>1.0-beta-2</version>
 			</extension>
 		</extensions>
-		
 	</build>
-
 	<reporting>
 		<plugins>
 			<!--<plugin>
@@ -139,7 +143,7 @@
 				<configuration>
 					<linkJavadoc>true</linkJavadoc>
 					<javadocDir>../apidocs</javadocDir>
-                    <linksource>true</linksource>
+					<linksource>true</linksource>
 					<aggregate>true</aggregate>
 				</configuration>
 			</plugin>
@@ -162,8 +166,6 @@
 			</plugin>-->
 		</plugins>
 	</reporting>
-
-
 	<repositories>
 		<repository>
 			<id>dev.davidsoergel.com</id>
@@ -176,7 +178,6 @@
 			<url>http://dev.davidsoergel.com/nexus/content/groups/public</url>
 		</pluginRepository>
 	</pluginRepositories>
-
 	<distributionManagement>
 		<repository>
 			<id>dev.davidsoergel.com.release</id>
@@ -189,7 +190,6 @@
 			<url>dav:http://dev.davidsoergel.com/nexus/content/repositories/snapshots</url>
 		</snapshotRepository>
 	</distributionManagement>
-
 	<ciManagement>
 		<system>jenkins</system>
 		<url>http://dev.davidsoergel.com/jenkins</url>
@@ -202,7 +202,6 @@
 			</notifier>
 		</notifiers>
 	</ciManagement>
-
 	<developers>
 		<developer>
 			<id>soergel</id>
