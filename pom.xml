@@ -183,10 +183,25 @@
 			</plugin>
 		</plugins>
 	</reporting>
+	<mirrors>
+		<mirror>
+			<id>dev.davidsoergel.com</id>
+			<mirrorOf>*</mirrorOf>
+			<name>David Soergel Nexus</name>
+			<url>http://dev.davidsoergel.com/nexus/content/groups/public</url>
+		</mirror>
+	</mirrors>
 	<repositories>
-		<repository>
+		<!--<repository>
 			<id>dev.davidsoergel.com</id>
 			<url>http://dev.davidsoergel.com/nexus/content/groups/public</url>
+		</repository>-->
+		<repository>
+			<id>dev.davidsoergel.com.snapshots</id>
+			<url>http://dev.davidsoergel.com/nexus/content/repositories/snapshots</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
 		</repository>
 	</repositories>
 	<pluginRepositories>
