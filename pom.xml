@@ -187,7 +187,27 @@
 		<repository>
 			<id>dev.davidsoergel.com</id>
 			<url>http://dev.davidsoergel.com/nexus/content/groups/public</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
 		</repository>
+		<!-- don't include the snapshot repository here, so that child projects can be sure they depend on no snapshots.
+		projects needing this should include it in the child pom. -->
+		<!--
+		<repository>
+			<id>dev.davidsoergel.com.snapshot</id>
+			<url>http://dev.davidsoergel.com/nexus/content/repositories/snapshots</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+		</repository>
+		-->
 	</repositories>
 	<pluginRepositories>
 		<pluginRepository>
