@@ -35,7 +35,7 @@
     <groupId>com.davidsoergel</groupId>
     <artifactId>basepom</artifactId>
     <name>basepom</name>
-    <version>1.02</version>
+    <version>1.03-SNAPSHOT</version>
     <url>http://dev.davidsoergel.com/basepom-ds</url>
     <description>A parent POM with my usual settings.</description>
     <organization>
