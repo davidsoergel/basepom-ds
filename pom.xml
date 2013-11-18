@@ -47,15 +47,21 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+	<scm>
+		<url>https://github.com/davidsoergel/basepom-ds</url>
+		<connection>scm:git:git://github.com/davidsoergel/basepom-ds.git</connection>
+		<developerConnection>scm:git:git@github.com:davidsoergel/basepom-ds.git</developerConnection>
+	</scm>
     <issueManagement>
-        <system>Trac</system>
-        <url>http://dev.davidsoergel.com</url>
+            <system>GitHub Issues</system>
+            <url>https://github.com/davidsoergel/basepom-ds/issues</url>
     </issueManagement>
-    <scm>
-        <connection>scm:hg:https://hg.davidsoergel.com/basepom-ds</connection>
-        <developerConnection>scm:hg:ssh://dev.davidsoergel.com//home/hg/basepom-ds</developerConnection>
-        <url>http://hg.davidsoergel.com/basepom-ds</url>
-    </scm>
+    <distributionManagement>
+      <site>
+        <id>github.davidsoergel</id>
+        <url>scm:git:ssh://git@github.com/davidsoergel/basepom-ds.git</url>
+      </site>
+    </distributionManagement>
     <dependencies>
         <dependency>
             <groupId>org.testng</groupId>
@@ -164,7 +170,23 @@
                 <artifactId>wagon-webdav</artifactId>
                 <version>1.0-beta-2</version>
             </extension>
-        </extensions>
+		
+	        <extension>
+	          <groupId>org.apache.maven.wagon</groupId>
+	          <artifactId>wagon-scm</artifactId>
+	          <version>2.5</version>
+	        </extension>
+	        <extension>
+	          <groupId>org.apache.maven.scm</groupId>
+	          <artifactId>maven-scm-manager-plexus</artifactId>
+	          <version>2.5</version>
+	        </extension>
+	        <extension>
+	          <groupId>org.apache.maven.scm</groupId>
+	          <artifactId>maven-scm-provider-gitexe</artifactId>
+	          <version>2.5</version>
+	        </extension>
+	    </extensions>
     </build>
     <reporting>
         <plugins>
