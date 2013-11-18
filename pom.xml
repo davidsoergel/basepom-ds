@@ -44,24 +44,52 @@
     </organization>
     <inceptionYear>2006</inceptionYear>
     <packaging>pom</packaging>
+	
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+	
 	<scm>
 		<url>https://github.com/davidsoergel/basepom-ds</url>
 		<connection>scm:git:git://github.com/davidsoergel/basepom-ds.git</connection>
 		<developerConnection>scm:git:git@github.com:davidsoergel/basepom-ds.git</developerConnection>
 	</scm>
+	
     <issueManagement>
             <system>GitHub Issues</system>
             <url>https://github.com/davidsoergel/basepom-ds/issues</url>
     </issueManagement>
+
     <distributionManagement>
-      <site>
-        <id>github.davidsoergel</id>
-        <url>scm:git:ssh://git@github.com/davidsoergel/basepom-ds.git</url>
-      </site>
+        <site>
+          <id>github.davidsoergel</id>
+          <url>scm:git:ssh://git@github.com/davidsoergel/basepom-ds.git</url>
+        </site>
+        <repository>
+            <id>dev.davidsoergel.com.release</id>
+            <name>David Soergel Release Repository</name>
+            <url>dav:http://dev.davidsoergel.com/nexus/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>dev.davidsoergel.com.snapshot</id>
+            <name>David Soergel Snapshot Repository</name>
+            <url>dav:http://dev.davidsoergel.com/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
     </distributionManagement>
+	
+    <ciManagement>
+        <system>jenkins</system>
+        <url>http://dev.davidsoergel.com/jenkins</url>
+        <notifiers>
+            <notifier>
+                <type>mail</type>
+                <configuration>
+                    <address>dev@davidsoergel.com</address>
+                </configuration>
+            </notifier>
+        </notifiers>
+    </ciManagement>
+	
     <dependencies>
         <dependency>
             <groupId>org.testng</groupId>
@@ -81,6 +109,7 @@
             <scope>compile</scope>
         </dependency>
     </dependencies>
+	
     <build>
         <pluginManagement>
             <plugins>
@@ -179,15 +208,16 @@
 	        <extension>
 	          <groupId>org.apache.maven.scm</groupId>
 	          <artifactId>maven-scm-manager-plexus</artifactId>
-	          <version>2.5</version>
+	          <version>1.5</version>
 	        </extension>
 	        <extension>
 	          <groupId>org.apache.maven.scm</groupId>
 	          <artifactId>maven-scm-provider-gitexe</artifactId>
-	          <version>2.5</version>
+	          <version>1.5</version>
 	        </extension>
 	    </extensions>
     </build>
+	
     <reporting>
         <plugins>
             <plugin>
@@ -222,6 +252,7 @@
             </plugin>
         </plugins>
     </reporting>
+	
     <repositories>
         <repository>
             <id>dev.davidsoergel.com</id>
@@ -248,36 +279,14 @@
 		</repository>
 		-->
     </repositories>
+	
     <pluginRepositories>
         <pluginRepository>
             <id>dev.davidsoergel.com</id>
             <url>http://dev.davidsoergel.com/nexus/content/groups/public</url>
         </pluginRepository>
     </pluginRepositories>
-    <distributionManagement>
-        <repository>
-            <id>dev.davidsoergel.com.release</id>
-            <name>David Soergel Release Repository</name>
-            <url>dav:http://dev.davidsoergel.com/nexus/content/repositories/releases</url>
-        </repository>
-        <snapshotRepository>
-            <id>dev.davidsoergel.com.snapshot</id>
-            <name>David Soergel Snapshot Repository</name>
-            <url>dav:http://dev.davidsoergel.com/nexus/content/repositories/snapshots</url>
-        </snapshotRepository>
-    </distributionManagement>
-    <ciManagement>
-        <system>jenkins</system>
-        <url>http://dev.davidsoergel.com/jenkins</url>
-        <notifiers>
-            <notifier>
-                <type>mail</type>
-                <configuration>
-                    <address>dev@davidsoergel.com</address>
-                </configuration>
-            </notifier>
-        </notifiers>
-    </ciManagement>
+	
     <developers>
         <developer>
             <id>soergel</id>
